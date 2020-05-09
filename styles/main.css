@@ -1,0 +1,240 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #2E2C2C;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.nav-bar-desktop {
+    display: flex;
+}
+
+.desktop-menu {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background-color: #000000;
+    z-index: 2;
+}
+
+.menu-icon {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 10px;
+    cursor: pointer; 
+}
+
+#nav-toggle span,
+#nav-toggle span:after,
+#nav-toggle span:before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 5px;
+    background-color: #ffffff; 
+    transition: all 500ms ease-in-out;
+}
+#nav-toggle span {
+    top: 18.5px;   
+}
+#nav-toggle span:after {
+    top: 10px;  
+}
+
+#nav-toggle span:before {
+   bottom: 10px;  
+}
+
+#nav-toggle.active span {
+    background-color: transparent;   
+}
+
+#nav-toggle.active span:after {
+    top: 0;
+    transform: rotate(45deg);   
+}
+
+#nav-toggle.active span:before {
+    bottom: 0;
+    transform: rotate(-45deg);   
+}
+
+.nav-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    position: absolute;
+    height: 100%;
+    transition: width 0.75s;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+    z-index: 1;
+}
+
+.nav-menu-container.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    transition: width 0.75s;
+    width: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+    z-index: 1;
+}
+
+.nav-list {
+    position: absolute;
+    left: -200px;
+    width: 200px;
+    transition: all 0.75s;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.nav-list.active {
+    left: 0;
+    width: 300px;
+    transition: all 0.75s;
+    margin: 0;
+    padding: 0;
+    padding-left: 130px;
+    z-index: 1;
+}
+
+.nav-item {
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: #2196f3;
+}
+.container {
+    width: 1200px;
+    padding-left: 60px;
+}
+
+.five-music-popular,
+.top-music {
+    padding: 10px 90px;
+    position: relative;
+    height: 330px;
+    z-index: 0;
+}
+
+.five-sing-popular {
+    margin: 0;
+    height: 240px;
+}
+
+.sing-popular-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-right: 40px;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 230px;
+}
+
+.sing-popular-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+}
+.sing-popular-item img {
+    width: 100%;
+    height: 180px;
+}
+
+.sing-popular-item span {
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+
+.five-music-popular h2,
+.top-music h2 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.top-music-list {
+    margin: 0;
+    padding: 0;
+}
+
+.top-music-item {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.decor-song {
+    align-items: center;
+    display: flex;
+}
+.number-song,
+.song-time {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 10px;
+    color: #ffffff;
+}
+
+.btn-song {
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.artist-name {
+    width: 100px;
+    margin: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.name-song {
+    width: 300px;
+    margin: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
